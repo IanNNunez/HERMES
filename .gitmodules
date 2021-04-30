@@ -1,0 +1,9 @@
+[submodule "HERMES PCB/MX_Alps_Hybrid.pretty"]
+	path = HERMES PCB/MX_Alps_Hybrid.pretty
+	url = https://github.com/ai03-2725/MX_Alps_Hybrid.pretty
+[submodule "HERMES PCB/random-keyboard-parts.pretty"]
+	path = HERMES PCB/random-keyboard-parts.pretty
+	url = https://github.com/ai03-2725/random-keyboard-parts.pretty
+[submodule "HERMES PCB/SparkFun-KiCad-Libraries"]
+	path = HERMES PCB/SparkFun-KiCad-Libraries
+	url = https://github.com/sparkfun/SparkFun-KiCad-Libraries.git

@@ -1,0 +1,14 @@
+Split, ergo, ortho. REDOX (https://github.com/mattdibi/redox-keyboard)
+Con lcd para visualizar en que macro map me encuentro, con ambas partes teniendo su propio mapa.
+Con rotary encoders
+Capacidad para led underglow (must research)
+Sin function row.
+Con el microcontrolador y algunos componentes a la vista. Esta vez los diodos deberán estar escondidos. 
+Componentes THT para hacer más facil en montado DIY.
+Basado en arduino o esp 32. Probablemente arduino ya que no estoy seguro de si el procesador del esp pueda funcionar. 
+Testear el esp32.
+Diseñar carcasa de acrilico.
+Lear to design QMK
+Symetrical (más barato para producir)
+Que pueda ser Hot swappable 
+

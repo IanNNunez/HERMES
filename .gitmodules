@@ -7,3 +7,6 @@
 [submodule "HERMES PCB/SparkFun-KiCad-Libraries"]
 	path = HERMES PCB/SparkFun-KiCad-Libraries
 	url = https://github.com/sparkfun/SparkFun-KiCad-Libraries.git
+[submodule "HERMES PCB/ProMicroKiCad"]
+	path = HERMES PCB/ProMicroKiCad
+	url = https://github.com/Biacco42/ProMicroKiCad.git

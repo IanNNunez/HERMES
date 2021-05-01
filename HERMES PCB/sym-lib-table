@@ -31,5 +31,5 @@
   (lib (name SparkFun-Switches)(type Legacy)(uri ${KIPRJMOD}/SparkFun-KiCad-Libraries/Libraries/SparkFun-Switches.lib)(options "")(descr ""))
   (lib (name promicro)(type Legacy)(uri ${KIPRJMOD}/ProMicroKiCad/promicro_library/promicro.lib)(options "")(descr ""))
   (lib (name ws2812b)(type Legacy)(uri ${KIPRJMOD}/WS2812B.pretty/Schematic-Symbol/ws2812b.lib)(options "")(descr ""))
-  (lib (name newblack_logo)(type Legacy)(uri "${KIPRJMOD}/Logos.pretty/newblack logo.lib")(options "")(descr ""))
+  (lib (name newblack_logo)(type Legacy)(uri "${KIPRJMOD}/NEWblack.pretty/newblack logo.lib")(options "")(descr ""))
 )

@@ -26,5 +26,5 @@
   (lib (name Silicon-Custom)(type KiCad)(uri ${KIPRJMOD}/SparkFun-KiCad-Libraries/Footprints/Silicon-Custom.pretty)(options "")(descr ""))
   (lib (name Silicon-Standard)(type KiCad)(uri ${KIPRJMOD}/SparkFun-KiCad-Libraries/Footprints/Silicon-Standard.pretty)(options "")(descr ""))
   (lib (name Switches)(type KiCad)(uri ${KIPRJMOD}/SparkFun-KiCad-Libraries/Footprints/Switches.pretty)(options "")(descr ""))
-  (lib (name Logos)(type KiCad)(uri ${KIPRJMOD}/Logos.pretty)(options "")(descr ""))
+  (lib (name NEWblack)(type KiCad)(uri "H:/[KEYBOARDS]/[HERMES]/HERMES/HERMES PCB/NEWblack.pretty")(options "")(descr ""))
 )

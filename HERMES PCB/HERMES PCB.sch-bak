@@ -1442,12 +1442,12 @@ Wire Wire Line
 Wire Wire Line
 	5800 5950 6050 5950
 $Comp
-L newblack_logo:LOGO #G1
+L newblack_logo:LOGO #G?
 U 1 1 60BF73C7
 P 7250 6800
-F 0 "#G1" H 7250 6589 60  0001 C CNN
+F 0 "#G?" H 7250 6589 60  0001 C CNN
 F 1 "LOGO" H 7250 7011 60  0001 C CNN
-F 2 "Logos:NEWblack logo" H 7250 6800 50  0001 C CNN
+F 2 "" H 7250 6800 50  0001 C CNN
 F 3 "" H 7250 6800 50  0001 C CNN
 	1    7250 6800
 	1    0    0    -1  

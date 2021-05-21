@@ -41,7 +41,7 @@
 #define PREVENT_STUCK_MODIFIERS
 
 
-
+/* RGB LED configuration */
 #define RGB_DI_PIN D4
 #define RGBLED_NUM 2
 #define RGBLIGHT_HUE_STEP 8
@@ -55,5 +55,9 @@
 //#define RGBLIGHT_EFFECT_KNIGHT
 #define RGBLIGHT_EFFECT_STATIC_GRADIENT
 
+/* Encoder configuration */
+#define ENCODERS_PAD_A { F5, F5 }
+#define ENCODERS_PAD_B { F4, F6 }
+#define ENCODER_RESOLUTIONS { 4, 2 }
 
 #endif

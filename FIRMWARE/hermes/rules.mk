@@ -55,3 +55,4 @@ BACKLIGHT_ENABLE ?= no  # Enable keyboard backlight functionality
 AUDIO_ENABLE ?= no
 RGBLIGHT_ENABLE = yes #Enables rgb light
 OLED_DRIVER_ENABLE = yes # Enables OLED displays
+ENCODER_ENABLE = yes # Enables rotary encoders

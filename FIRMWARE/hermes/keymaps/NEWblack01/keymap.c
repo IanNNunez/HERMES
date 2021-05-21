@@ -5,6 +5,9 @@
 #define _MACRO 1
 #define _TESTS 2
 
+bool is_alt_tab_active = false; //for alt tabbing
+uint16_t alt_tab_timer = 0;
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[_NUMPAD] = KEYMAP /*DEFAULT*/(
@@ -227,10 +230,25 @@ void render_info(void){ //regular info rendering function. Heavily inspired in Y
 			oled_write_P(PSTR("off"),false);
 	}
 	oled_write_P(PSTR("-----"),false);
-	oled_write_P(PSTR("E1:  "),false);//PUT SOMETHING
-	oled_write_P(PSTR("E2:  "),false);//PUT SOMETHING
+	
 	//encoder1 and encoder 2 functions
-
+	switch (get_highest_layer(layer_state)) {
+		case _NUMPAD:
+			oled_write_P(PSTR("E1:TB"),false);//VOLUME
+			oled_write_P(PSTR("E2:UD"),false);//UP DOWN
+			break;
+		case _MACRO:
+			oled_write_P(PSTR("E1:CZ"),false);//UNDO REDO
+			oled_write_P(PSTR("E2:VL"),false);//VOL UP DOWN
+			break;
+		case _TESTS:
+			oled_write_P(PSTR("E1:HU"),false);//HUE UP DOWN
+			oled_write_P(PSTR("E2:VA"),false);//VALUE UP DOWN
+			break;
+		default:
+			oled_write_P(PSTR("E1:ND"),false);//UNDEFINED
+			oled_write_P(PSTR("E2:ND"),false);//UNDEFINED
+	}
 }
 
 
@@ -246,10 +264,90 @@ void oled_task_user(void) {	//writing in the actual oled function
 		
 		render_info();
 	}
-	
-	
-	
-	
-
 }
+
+void encoder_update_kb(uint8_t index, bool clockwise){
+	switch(get_highest_layer(layer_state)){
+    	case _NUMPAD:
+			if(index==0){ //alt tab code courtesy of https://docs.splitkb.com/hc/en-us/articles/360010513760-How-can-I-use-a-rotary-encoder-
+				if(clockwise){
+					if (!is_alt_tab_active)
+					{
+						is_alt_tab_active=true;
+						register_code(KC_LALT);
+					}
+					alt_tab_timer = timer_read();
+					tap_code16(KC_TAB);
+				} 
+				else{
+					alt_tab_timer = timer_read();
+					tap_code16(S(KC_TAB));
+				}
+			}
+			else if(index==1){ //mouse wheel
+				if (clockwise)
+				{
+					tap_code16(KC_WH_U);
+				}
+				else{
+					tap_code16(KC_WH_D);
+				}
+			}
+			break;
+		case _MACRO:
+			if(index==0){
+				if (clockwise)
+				{
+					tap_code16(C(KC_Z)); //undo
+				}
+				else{
+					tap_code16(C(KC_Y)); //redu
+				}
+			}
+			else if(index==1){
+				if (clockwise)
+				{
+					tap_code(KC_VOLU); //vol up 
+				}
+				else{
+					tap_code(KC_VOLD);//vol down
+				}
+			}
+			break;
+		case _TESTS:
+			if(index==0){
+				if (clockwise)
+				{
+					rgblight_increase_hue(); //undo
+				}
+				else{
+					rgblight_decrease_hue(); //redu
+				}
+			}
+			else if(index==1){
+				if (clockwise)
+				{
+					rgblight_increase_val(); //val up 
+				}
+				else{
+					rgblight_decrease_val();//val down
+				}
+			}
+			
+			break;
+		
+			
+    }
+}
+
+void matrix_scan_user (void){
+	if(is_alt_tab_active){ //unchecks lalt
+		if(timer_elapsed(alt_tab_timer)> 1250) {
+			unregister_code(KC_LALT);
+			is_alt_tab_active=false;
+		}
+	}
+}	
+
+
 #endif

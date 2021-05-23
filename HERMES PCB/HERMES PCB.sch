@@ -1144,8 +1144,6 @@ Text GLabel 9700 3700 2    50   Input ~ 0
 RE_A1
 Text GLabel 9700 4300 2    50   Input ~ 0
 RE_B2
-Text GLabel 9700 4500 2    50   Input ~ 0
-RE_A2
 Wire Wire Line
 	9550 4500 9700 4500
 Wire Wire Line
@@ -1423,18 +1421,12 @@ Text GLabel 1700 1700 0    50   Input ~ 0
 D2
 Wire Wire Line
 	1700 1700 1900 1700
-Text GLabel 6050 6250 2    50   Input ~ 0
-D2
 Text GLabel 5800 5950 0    50   Input ~ 0
 RE_B1
 Text GLabel 5800 6050 0    50   Input ~ 0
 RE_A1
 Text GLabel 5800 6150 0    50   Input ~ 0
 RE_B2
-Text GLabel 5800 6250 0    50   Input ~ 0
-RE_A2
-Wire Wire Line
-	5800 6250 6050 6250
 Wire Wire Line
 	5800 6150 6050 6150
 Wire Wire Line
@@ -1452,4 +1444,6 @@ F 3 "" H 7250 6800 50  0001 C CNN
 	1    7250 6800
 	1    0    0    -1  
 $EndComp
+Text GLabel 9700 4500 2    50   Input ~ 0
+RE_A1
 $EndSCHEMATC

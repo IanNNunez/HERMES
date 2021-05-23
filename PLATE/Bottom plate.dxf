@@ -23,9 +23,9 @@ $INSBASE
   9
 $EXTMIN
  10
--27.8125
+-11
  20
--23.125
+-10
  30
 0
   9
@@ -1115,9 +1115,9 @@ AcDbViewportTableRecord
  21
 1
  12
-130.125
+88.1706244503079
  22
-80.375
+72.77924362357086
  13
 0
  23
@@ -1143,7 +1143,7 @@ AcDbViewportTableRecord
  37
 0
  40
-212
+186.4555848724715
  41
 1.870283018867924
  42
@@ -2781,31 +2781,9 @@ AcDbCircle
  40
 1
   0
-CIRCLE
-  5
-53
-100
-AcDbEntity
-  8
-0
-  6
-ByLayer
- 62
-  256
-370
-   -1
-100
-AcDbCircle
- 10
-0
- 20
-0
- 40
-1
-  0
 LINE
   5
-54
+53
 100
 AcDbEntity
   8
@@ -2829,7 +2807,7 @@ AcDbLine
   0
 ARC
   5
-55
+54
 100
 AcDbEntity
   8
@@ -2857,7 +2835,7 @@ AcDbArc
   0
 LINE
   5
-56
+55
 100
 AcDbEntity
   8
@@ -2881,7 +2859,7 @@ AcDbLine
   0
 ARC
   5
-57
+56
 100
 AcDbEntity
   8
@@ -2909,7 +2887,7 @@ AcDbArc
   0
 LINE
   5
-58
+57
 100
 AcDbEntity
   8
@@ -2933,7 +2911,7 @@ AcDbLine
   0
 ARC
   5
-59
+58
 100
 AcDbEntity
   8
@@ -2961,7 +2939,7 @@ AcDbArc
   0
 LINE
   5
-5A
+59
 100
 AcDbEntity
   8
@@ -2985,7 +2963,7 @@ AcDbLine
   0
 LINE
   5
-5B
+5A
 100
 AcDbEntity
   8
@@ -3008,6 +2986,34 @@ AcDbLine
 -1.525000302537851
   0
 ARC
+  5
+5B
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+0
+ 20
+0.4749996974621489
+ 40
+2
+100
+AcDbArc
+ 50
+180
+ 51
+270
+  0
+CIRCLE
   5
 5C
 100
@@ -3027,13 +3033,7 @@ AcDbCircle
  20
 0.4749996974621489
  40
-2
-100
-AcDbArc
- 50
-180
- 51
-270
+1
   0
 ENDSEC
   0
